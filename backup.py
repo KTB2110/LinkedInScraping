@@ -13,6 +13,7 @@ def authenticate_google_drive():
     
     if gauth.credentials is None:
         # Authenticate if they're not there
+        print("HI")
         gauth.LocalWebserverAuth()
     elif gauth.access_token_expired:
         # Refresh them if expired
