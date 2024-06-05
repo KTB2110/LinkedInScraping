@@ -22,7 +22,7 @@ def upload_to_drive(file_path, drive_folder_id, drive):
         print(f"An error occurred while uploading the file: {e}")
 
 def download_and_save(drive):
-    source_file_path = '/Users/krishnatejbhat/Documents/Research/LinkedInScraping/LinkedInScraping/continuous_data_scrape.csv'  # Replace with your CSV file path
+    source_file_path = '/home/krishna/Desktop/LinkedInScraping/continuous_data_scrape.csv'  # Replace with your CSV file path
     backup_file_path = f'backup_{datetime.datetime.now().strftime("%Y%m%d_%H%M%S")}.csv'
 
     try:
