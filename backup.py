@@ -9,6 +9,7 @@ from pydrive.drive import GoogleDrive
 # Authenticate and create the PyDrive client
 def authenticate_google_drive():
     gauth = GoogleAuth()
+    gauth.LoadClientConfigFile("/home/krishna/Desktop/LinkedInScraping/client_secrets.json")
     gauth.LocalWebserverAuth()  # Creates local webserver and auto handles authentication.
     return GoogleDrive(gauth)
 
