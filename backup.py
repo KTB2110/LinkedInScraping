@@ -38,12 +38,7 @@ def download_and_save(drive):
 
 def main():
     drive = authenticate_google_drive()
-    # Schedule the job every day at a specific time
-    schedule.every().day.at("14:33").do(download_and_save, drive)
-
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+    download_and_save(drive)
 
 if __name__ == "__main__":
     main()
