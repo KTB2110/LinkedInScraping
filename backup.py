@@ -10,7 +10,6 @@ from pydrive.drive import GoogleDrive
 def authenticate_google_drive():
     gauth = GoogleAuth()
     gauth.LoadClientConfigFile("/home/krishna/Desktop/LinkedInScraping/client_secrets.json")
-    # "/home/krishna/Desktop/LinkedInScraping/client_secrets.json"
     try:
         # Try to load saved client credentials
         gauth.LoadCredentialsFile("/home/krishna/Desktop/LinkedInScraping/mycreds.txt")
