@@ -10,7 +10,20 @@ from pydrive.drive import GoogleDrive
 def authenticate_google_drive():
     gauth = GoogleAuth()
     gauth.LoadClientConfigFile("/home/krishna/Desktop/LinkedInScraping/client_secrets.json")
-    gauth.LocalWebserverAuth()  # Creates local webserver and auto handles authentication.
+    
+    if gauth.credentials is None:
+        # Authenticate if they're not there
+        gauth.LocalWebserverAuth()
+    elif gauth.access_token_expired:
+        # Refresh them if expired
+        gauth.Refresh()
+    else:
+        # Initialize the saved creds
+        gauth.Authorize()
+    
+    # Save the current credentials to a file
+    gauth.SaveCredentialsFile("/home/krishna/Desktop/LinkedInScraping/client_secrets.json")
+    
     return GoogleDrive(gauth)
 
 def upload_to_drive(file_path, drive_folder_id, drive):
