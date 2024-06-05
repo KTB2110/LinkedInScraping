@@ -9,8 +9,8 @@ from pydrive.drive import GoogleDrive
 # Authenticate and create the PyDrive client
 def authenticate_google_drive():
     gauth = GoogleAuth()
-    gauth.LoadClientConfigFile("/home/krishna/Desktop/LinkedInScraping/client_secrets.json")
-    
+    gauth.LoadClientConfigFile("/home/krishna/Desktop/LinkedInScraping/mycreds.txt")
+    # "/home/krishna/Desktop/LinkedInScraping/client_secrets.json"
     if gauth.credentials is None:
         # Authenticate if they're not there
         print("HI")
@@ -23,7 +23,7 @@ def authenticate_google_drive():
         gauth.Authorize()
     
     # Save the current credentials to a file
-    gauth.SaveCredentialsFile("/home/krishna/Desktop/LinkedInScraping/client_secrets.json")
+    gauth.SaveCredentialsFile("/home/krishna/Desktop/LinkedInScraping/mycreds.txt")
     
     return GoogleDrive(gauth)
 
