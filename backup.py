@@ -9,18 +9,27 @@ from pydrive.drive import GoogleDrive
 # Authenticate and create the PyDrive client
 def authenticate_google_drive():
     gauth = GoogleAuth()
-    gauth.LoadClientConfigFile("/home/krishna/Desktop/LinkedInScraping/mycreds.txt")
+    gauth.LoadClientConfigFile("/home/krishna/Desktop/LinkedInScraping/client_secrets.json")
     # "/home/krishna/Desktop/LinkedInScraping/client_secrets.json"
+    try:
+        # Try to load saved client credentials
+        gauth.LoadCredentialsFile("/home/krishna/Desktop/LinkedInScraping/mycreds.txt")
+        print("Loaded credentials from mycreds.txt")
+    except Exception as e:
+        print(f"Error loading credentials from mycreds.txt: {e}")
+
     if gauth.credentials is None:
-        # Authenticate if they're not there
-        print("HI")
+        # Authenticate if credentials are not available
         gauth.LocalWebserverAuth()
+        print("Performed local webserver auth")
     elif gauth.access_token_expired:
         # Refresh them if expired
         gauth.Refresh()
+        print("Refreshed expired credentials")
     else:
         # Initialize the saved creds
         gauth.Authorize()
+        print("Authorized with existing credentials")
     
     # Save the current credentials to a file
     gauth.SaveCredentialsFile("/home/krishna/Desktop/LinkedInScraping/mycreds.txt")
