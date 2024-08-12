@@ -126,3 +126,7 @@ Traceback (most recent call last):
   File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 477, in Refresh
     raise RefreshError('Access token refresh failed: %s' % error)
 pydrive.auth.RefreshError: Access token refresh failed: invalid_grant: Bad Request
+Loaded credentials from mycreds.txt
+Refreshed expired credentials
+File copied: backup_20240811_154302.csv
+An error occurred while uploading the file: Redirected but the response is missing a Location: header.
