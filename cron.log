@@ -130,3 +130,99 @@ Loaded credentials from mycreds.txt
 Refreshed expired credentials
 File copied: backup_20240811_154302.csv
 An error occurred while uploading the file: Redirected but the response is missing a Location: header.
+Loaded credentials from mycreds.txt
+Traceback (most recent call last):
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 475, in Refresh
+    self.credentials.refresh(self.http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 545, in refresh
+    self._refresh(http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 761, in _refresh
+    self._do_refresh_request(http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 819, in _do_refresh_request
+    raise HttpAccessTokenRefreshError(error_msg, status=resp.status)
+oauth2client.client.HttpAccessTokenRefreshError: invalid_grant: Token has been expired or revoked.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 67, in <module>
+    main()
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 63, in main
+    drive = authenticate_google_drive()
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 26, in authenticate_google_drive
+    gauth.Refresh()
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 477, in Refresh
+    raise RefreshError('Access token refresh failed: %s' % error)
+pydrive.auth.RefreshError: Access token refresh failed: invalid_grant: Token has been expired or revoked.
+Loaded credentials from mycreds.txt
+Traceback (most recent call last):
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 475, in Refresh
+    self.credentials.refresh(self.http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 545, in refresh
+    self._refresh(http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 761, in _refresh
+    self._do_refresh_request(http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 819, in _do_refresh_request
+    raise HttpAccessTokenRefreshError(error_msg, status=resp.status)
+oauth2client.client.HttpAccessTokenRefreshError: invalid_grant: Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 67, in <module>
+    main()
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 63, in main
+    drive = authenticate_google_drive()
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 26, in authenticate_google_drive
+    gauth.Refresh()
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 477, in Refresh
+    raise RefreshError('Access token refresh failed: %s' % error)
+pydrive.auth.RefreshError: Access token refresh failed: invalid_grant: Bad Request
+Loaded credentials from mycreds.txt
+Traceback (most recent call last):
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 475, in Refresh
+    self.credentials.refresh(self.http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 545, in refresh
+    self._refresh(http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 761, in _refresh
+    self._do_refresh_request(http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 819, in _do_refresh_request
+    raise HttpAccessTokenRefreshError(error_msg, status=resp.status)
+oauth2client.client.HttpAccessTokenRefreshError: invalid_grant: Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 67, in <module>
+    main()
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 63, in main
+    drive = authenticate_google_drive()
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 26, in authenticate_google_drive
+    gauth.Refresh()
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 477, in Refresh
+    raise RefreshError('Access token refresh failed: %s' % error)
+pydrive.auth.RefreshError: Access token refresh failed: invalid_grant: Bad Request
+Loaded credentials from mycreds.txt
+Traceback (most recent call last):
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 475, in Refresh
+    self.credentials.refresh(self.http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 545, in refresh
+    self._refresh(http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 761, in _refresh
+    self._do_refresh_request(http)
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/oauth2client/client.py", line 819, in _do_refresh_request
+    raise HttpAccessTokenRefreshError(error_msg, status=resp.status)
+oauth2client.client.HttpAccessTokenRefreshError: invalid_grant: Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 67, in <module>
+    main()
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 63, in main
+    drive = authenticate_google_drive()
+  File "/home/krishna/Desktop/LinkedInScraping/backup.py", line 26, in authenticate_google_drive
+    gauth.Refresh()
+  File "/home/krishna/Desktop/LinkedInScraping/.venv/lib/python3.10/site-packages/pydrive/auth.py", line 477, in Refresh
+    raise RefreshError('Access token refresh failed: %s' % error)
+pydrive.auth.RefreshError: Access token refresh failed: invalid_grant: Bad Request
